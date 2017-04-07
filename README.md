@@ -22,25 +22,25 @@ Workflow
  7. Add new TLS endpoints to enable-tls.yaml
  8. Create new Ceph client key for director-deployed Ceph
  9. Run Aodh migration
- NOTE: it is possible to remove ceilometer-[alarm,notification] pcs services, resources, and rpm pkg prior to this step
- NOTE: Aodh migration and Keystone migration, steps 9 & 10, require OSP 8 repos on overcloud
+    1. it is possible to remove ceilometer-[alarm,notification] pcs services, resources, and rpm pkg prior to this step
+    1. Aodh migration and Keystone migration, steps 9 & 10, require OSP 8 repos on overcloud
  10. Migrate Keystone to WSGI
  11. Add OSP 9 repos to the overcloud either before or during the pacemaker-init step
  12. Run major-upgrade-pacemaker-init
- NOTE: Make sure all pcs services are online and running after steps 3, 9, 10, 11, 12
+    1. Make sure all pcs services are online and running after steps 3, 9, 10, 11, 12
  13. Update object storage nodes if present
  14. Update controller nodes
- NOTE: reboot controllers if kernel or openvswitch version changes
- NOTE: controllers must be rebooted one at a time to preserve HA
- NOTE: make sure all pcs services are up and running on all nodes before rebooting a node
+    1. reboot controllers if kernel or openvswitch version changes
+    1. controllers must be rebooted one at a time to preserve HA
+    1. make sure all pcs services are up and running on all nodes before rebooting a node
  15. Upgrade the Ceph nodes
- NOTE: Reboot if kernel or openvswitch version changes
- NOTE: Requires setting noout and norebalance then rebooting OSDs one at a time
- NOTE: check ceph health and PG map health after each OSD reboot
+    1. Reboot if kernel or openvswitch version changes
+    1. Requires setting noout and norebalance then rebooting OSDs one at a time
+    1. check ceph health and PG map health after each OSD reboot
  16. Update compute nodes
- NOTE: Disable nova-compute and migrate instances off each compute node before updating
- NOTE: after updating compute, reboot if kernel or openvswitch version changes
- NOTE: re-enable nova-compute and migrate instances back before proceeding to the next compute
+    1. Disable nova-compute and migrate instances off each compute node before updating
+    1. after updating compute, reboot if kernel or openvswitch version changes
+    1. re-enable nova-compute and migrate instances back before proceeding to the next compute
  17. Run final converge deploy command with --force-postconfig switch
- NOTE: make sure all pcs services are up and running after converge
- NOTE: verify new service endpoints are accessible: sahara, aodh, gnocchi
+    1. make sure all pcs services are up and running after converge
+    1. verify new service endpoints are accessible: sahara, aodh, gnocchi
