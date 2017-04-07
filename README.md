@@ -24,9 +24,9 @@ Workflow
  9. Run Aodh migration
     1. it is possible to remove ceilometer-[alarm,notification] pcs services, resources, and rpm pkg prior to this step
     2. Aodh migration and Keystone migration, steps 9 & 10, require OSP 8 repos on overcloud
- 10. Migrate Keystone to WSGI
- 11. Add OSP 9 repos to the overcloud either before or during the pacemaker-init step
- 12. Run major-upgrade-pacemaker-init
+ 1. Migrate Keystone to WSGI
+ 2. Add OSP 9 repos to the overcloud either before or during the pacemaker-init step
+ 3. Run major-upgrade-pacemaker-init
     1. Make sure all pcs services are online and running after steps 3, 9, 10, 11, 12
  13. Update object storage nodes if present
  14. Update controller nodes
