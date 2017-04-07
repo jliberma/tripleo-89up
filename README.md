@@ -13,10 +13,10 @@ Workflow
 
  1. Deploy overcloud with customisations
  2. Update undercloud to latest version of OSP 8
-   2a: reboot undercloud if kernel or openvswitch version changes
+    2a: reboot undercloud if kernel or openvswitch version changes
  3. Update overcloud to latest version of OSP 8
  4. Update overcloud images to latest version of OSP 8
-   4a: reboot overcloud nodes if kernel or openvswitch version changes
+    4a: reboot overcloud nodes if kernel or openvswitch version changes
  5. Upgrade undercloud to OSP 9
  6. Install OSP 9 overcloud images
  7. Add new TLS endpoints to enable-tls.yaml
