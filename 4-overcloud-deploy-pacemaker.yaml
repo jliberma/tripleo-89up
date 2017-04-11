@@ -2,6 +2,7 @@
 
 exec openstack overcloud deploy \
         --templates /usr/share/openstack-tripleo-heat-templates \
+        --libvirt-type qemu \
         --timeout 90 \
         --ntp-server 10.16.255.1 \
         --control-flavor control --control-scale 3 \
