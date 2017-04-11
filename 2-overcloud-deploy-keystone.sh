@@ -2,6 +2,7 @@
 
 exec openstack overcloud deploy \
         --templates /usr/share/openstack-tripleo-heat-templates \
+        --timeout 90 \
         --ntp-server 10.16.255.1 \
         --control-flavor control --control-scale 3 \
         --compute-flavor compute --compute-scale 2 \
