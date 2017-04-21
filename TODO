@@ -1,0 +1,2 @@
+1. Add Ansible playbook to perform setup tasks for templates, certs,
+   bashrc
