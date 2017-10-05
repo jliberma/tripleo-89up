@@ -9,6 +9,8 @@ This environment includes the following customisations:
  3. Setting timezone
  4. TLS SSL encryption on public endpoints
 
+NOTE: The SSH keys, passwords, user names, and addresses used in these example files are for reference purposes only and do not correspond to an existing system. If you use these example files as a reference template please replace these with information specific to your own environment.
+
 Workflow
 
  1. Deploy overcloud with customisations
